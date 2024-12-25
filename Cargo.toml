@@ -1,6 +1,12 @@
 [package]
 name = "hoicolor"
+description = "convert hearts of iron colors -> ansi"
 version = "0.1.0"
 edition = "2021"
+repository = "https://github.com/tlm9201/hoicolor"
+license = "MIT"
+readme = "README.md"
+keywords = ["gamedev", "paradox", "hoi4"]
+categories = ["command-line-utilities"]
 
 [dependencies]
