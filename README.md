@@ -7,20 +7,26 @@ the original purpose in creating this project was for my other hoi4 related proj
 
 hoi4 uses escape sequences similar to minecraft¹. a start of a color is indicated by the unicode character `U+0011 ()` followed by and english character representing the color (e.g. White: W). to end a sequence the unicode character followed by `!` is used². stdout however cannot understand this. so, hoicolor maps a hoi4 colored string and replaces the colors with ansi color sequences³.
 
+## usage
+```rust
+use hoicolor::Converter;
 
-thanks
+fn from_hoi(s: String) -> String {
+  let converter: Converter = Converter(s);
+  return s.to_ansi(); // hoi4 -> ansi
+}
+```
+
+## thanks
 * @ewof for the hoi4 colors paste
 
-
-todo
+## todo
 * api to convert from ansi/human readable color -> hoi4 color
 
-
-references
+## references
 1. [minecraft colors](https://minecraft.wiki/w/Formatting_codes#Color_codes)
 2. [hoi4 colors paste](https://pastebin.com/raw/esAQQ8RE)
 3. [ansi colors](https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797)
 
-
-license
+## license
 * [MIT](LICENSE)
